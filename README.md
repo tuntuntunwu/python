@@ -7,7 +7,8 @@
 
 标准库：
 
-<https://docs.python.org/3/library/index.html>
+<https://docs.python.org/3/library/index.html>  
+<https://github.com/tuntuntunwu/python/tree/master/sum-std-lib>
 
 Pip包（库）管理：
 
@@ -18,9 +19,9 @@ Anaconda包（库）管理：
 
 <https://www.jianshu.com/p/eaee1fadc1e9>
 
-numpy:
+第三方库：
 
-<https://github.com/tuntuntunwu/python/blob/master/numpy.pdf>
+<https://github.com/tuntuntunwu/python/tree/master/sum-3rd-party-lib>
 
 PyQt5:
 

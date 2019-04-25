@@ -23,12 +23,12 @@ Anaconda包（库）管理：
 
 <https://github.com/tuntuntunwu/python/tree/master/sum-3rd-party-lib>
 
-PyQt5:
+UI - PyQt5:
 
 <https://maicss.gitbooks.io/pyqt5/content/>  
 <https://github.com/tuntuntunwu/python/tree/master/PyQt5>
 
-pyinstaller:
+打包exe - pyinstaller:
 
 <http://www.pyinstaller.org/>  
 <https://blog.csdn.net/weixin_42052836/article/details/82315118>

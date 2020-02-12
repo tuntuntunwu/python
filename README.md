@@ -33,3 +33,8 @@ UI - PyQt5:
 <http://www.pyinstaller.org/>  
 <https://blog.csdn.net/weixin_42052836/article/details/82315118>
 
+打包app - py2app:
+
+<https://www.jianshu.com/p/85583e8d1e52>  
+<https://github.com/ronaldoussoren/py2app>
+

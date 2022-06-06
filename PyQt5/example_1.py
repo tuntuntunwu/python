@@ -13,7 +13,7 @@ class DiyWindow(QMainWindow):
         # 状态栏
         self.statusBar().showMessage("This is status bar!")
 
-        # QAction是菜单栏、工具栏或者快捷键的动作的组合。
+        # QAction是菜单栏、工具栏或者快捷键的！动作！的组合。
         exitAct = QAction(QIcon('./exit.jpg'), '&Exit', self)
         exitAct.setShortcut('Ctrl+Q')
         exitAct.setStatusTip('Exit application')
@@ -21,6 +21,7 @@ class DiyWindow(QMainWindow):
 
         # 菜单栏
         menubar = self.menuBar()
+        menubar.setNativeMenuBar(False)  # macOS启用
         fileMenu = menubar.addMenu('&File')
         fileMenu.addAction(exitAct)
 
@@ -28,8 +29,11 @@ class DiyWindow(QMainWindow):
         toolbar = self.addToolBar('&Exit')
         toolbar.addAction(exitAct)
 
+        # 程序运行时，你将直观地知道菜单栏、工具栏和状态栏是什么
+
         # 布局
-        # QmainWindow有自己的布局，它不能再设置布局了，不过可以曲线救国
+        # 如果想使用Qt官方菜单栏、工具栏和状态栏，则必须继承QmainWindow初始化
+        # 而使用QmainWindow初始化则不能使用自定义布局，不过可以技巧性地实现
         grid = QGridLayout()
         btn0 = QPushButton("ok")
         btn1 = QPushButton("cancel")

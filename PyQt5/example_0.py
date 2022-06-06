@@ -22,7 +22,7 @@ if __name__ == '__main__':
     w = QWidget()
     w.setGeometry(100, 100, 400, 400)  # = move(位置) + resize(大小)
     w.setWindowTitle('Icon')
-    w.setWindowIcon(QIcon("./1.jpg"))
+    w.setWindowIcon(QIcon("./4.png"))
 
     # 窗口居中
     qr = w.frameGeometry()

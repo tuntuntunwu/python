@@ -22,22 +22,23 @@ class DiyWindow(QMainWindow):
         single_rec_act.triggered.connect(self.changeLayout)
         single_info_act = QAction(QIcon('./1_1.png'), '单字信息', self)
         single_info_act.setShortcut('Ctrl+S')
-        single_info_act.setStatusTip('单个文字的信息')
+        single_info_act.setStatusTip('显示单个文字的信息')
         single_info_act.triggered.connect(self.changeLayout)
         rubbing_info_act = QAction(QIcon('./2_1.png'), '拓片信息', self)
         rubbing_info_act.setShortcut('Ctrl+R')
-        rubbing_info_act.setStatusTip('整个拓片的信息')
+        rubbing_info_act.setStatusTip('显示整个拓片的信息')
         rubbing_info_act.triggered.connect(self.changeLayout)
 
         # 菜单栏
         menubar = self.menuBar()
-        fileMenu = menubar.addMenu('功能')
+        menubar.setNativeMenuBar(False)  # macOS启用
+        fileMenu = menubar.addMenu('Function')
         fileMenu.addAction(single_rec_act)
         fileMenu.addAction(single_info_act)
         fileMenu.addAction(rubbing_info_act)
 
         # 工具栏
-        toolbar = self.addToolBar('功能')
+        toolbar = self.addToolBar('Function')
         toolbar.addAction(single_rec_act)
         toolbar.addAction(single_info_act)
         toolbar.addAction(rubbing_info_act)
@@ -52,6 +53,7 @@ class DiyWindow(QMainWindow):
         # 初始化第三个功能布局：拓片信息
         self.initLayout2()
 
+        # 使用QStackedWidget实现整体布局改变
         self.stacked = QStackedWidget()
         self.stacked.addWidget(self.layout0)
         self.stacked.addWidget(self.layout1)
@@ -144,7 +146,7 @@ class DiyWindow(QMainWindow):
             QMessageBox.information(self, "Info.", "请选择图片^_^")
 
     def predictImg(self):
-        pass
+        QMessageBox.information(self, "Info.", "#TODO")
 
     def initLayout1(self):
         # 布局
@@ -208,7 +210,7 @@ class DiyWindow(QMainWindow):
         btn.clicked.connect(self.showSingleInfo)
 
     def showSingleInfo(self):
-        pass
+        QMessageBox.information(self, "Info.", "#TODO")
 
     def initLayout2(self):
         # 布局
@@ -221,7 +223,7 @@ class DiyWindow(QMainWindow):
         btn.clicked.connect(self.showRubbingInfo)
 
     def showRubbingInfo(self):
-        pass
+        QMessageBox.information(self, "Info.", "#TODO")
 
     def changeLayout(self):
         sender = self.sender()
